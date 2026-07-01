@@ -1,0 +1,11 @@
+# CMake build output
+/build/
+
+# compile database (symlink into build/)
+/compile_commands.json
+
+# In-source build artifacts (avoid committing these)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
