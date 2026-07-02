@@ -1,4 +1,5 @@
 #pragma once
+#include "camera.h"
 #include "shape.h"
 #include <vector>
 
@@ -8,7 +9,10 @@ public:
   Scene(const Scene &) = delete;
   void addShape(Shape *shape);
   const std::vector<Shape *> &getShapes() const;
+  void setCamera(Camera *cam);
+  const Camera &getCamera() const;
 
 private:
   std::vector<Shape *> shapes;
+  Camera *camera = nullptr;
 };

@@ -5,6 +5,7 @@ add_library(ndshin_core STATIC
     shape.h
     camera.cpp
     window.cpp
+    scene.cpp
 )
 target_include_directories(ndshin_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
