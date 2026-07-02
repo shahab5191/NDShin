@@ -55,11 +55,9 @@ float Window::beginFrame() {
 }
 
 void Window::presentFrame(const std::vector<float> &buffer) {
-  pixel_buffer = buffer;
-
   glBindTexture(GL_TEXTURE_2D, textureID);
   glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_RGB, GL_FLOAT,
-                  pixel_buffer.data());
+                  buffer.data());
 
   glBindFramebuffer(GL_FRAMEBUFFER, 0);
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

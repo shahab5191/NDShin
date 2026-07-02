@@ -19,7 +19,7 @@ Shape *RayTracer::findClosestIntersection(const Ray &ray, float &closest_t) {
 
 bool RayTracer::isInShadow(const glm::vec3 &point, glm::vec3 &light_dir,
                            const Light &light) {
-  std::vector<Shape *> shapes = scene->getShapes();
+  const std::vector<Shape *> &shapes = scene->getShapes();
   float light_distance = glm::length(light.getPosition() - point);
   Ray shadow_ray(point + 0.001f * light_dir, light_dir);
 

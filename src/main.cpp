@@ -46,10 +46,7 @@ int main() {
     float radius = 5.0f;
     camera.setPosition(
         {target.x + radius * sin(t), target.y, target.z + radius * cos(t)});
-    std::cout << "Camera Position: (" << camera.getPosition().x << ", "
-              << camera.getPosition().y << ", " << camera.getPosition().z << ")"
-              << std::endl;
-    std::cout << "FPS: " << 1.0f / delta_time << std::endl;
+    std::cout << "FPS: " << 1.0f / delta_time << '\n';
     t += delta_time;
     ray_tracer.render();
     window.presentFrame(ray_tracer.getPixelBuffer());

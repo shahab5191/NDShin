@@ -24,5 +24,4 @@ private:
   GLuint textureID;
   GLuint fbo;
   double last_time;
-  std::vector<float> pixel_buffer;
 };
