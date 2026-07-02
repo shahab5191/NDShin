@@ -12,7 +12,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # include paths for FetchContent deps like glad, glfw, glm.
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -march=native")
+
+# Enable link-time optimization for Release builds when the toolchain supports
+# it (cross-translation-unit inlining of the hot intersect/render paths).
+include(CheckIPOSupported)
+check_ipo_supported(RESULT ipo_supported OUTPUT ipo_error)
+if(ipo_supported)
+    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON)
+endif()
 
 
 # GLM

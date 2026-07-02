@@ -19,14 +19,21 @@ int main() {
   camera.setFOV(45.0f);
   camera.setAspectRatio(static_cast<float>(WIDTH) / HEIGHT);
 
+  Light light({-5.0f, 5.0f, 0.0f}, {1.0f, 1.0f, 1.0f}, 1.0f);
+  Light light_2({10.0f, -5.0f, -3.0f}, {1.0f, 0.0f, 0.3f}, 2.0f);
+  Light light_3({0.0f, 0.0f, 5.0f}, {0.0f, 1.0f, 0.3f}, 2.0f);
+
   Sphere sphere_1({-1.0f, 0.0f, -5.0f}, 1.0f);
-  sphere_1.setColor({1.0f, 0.0f, 0.0f});
+  sphere_1.setColor({0.6f, 0.3f, 0.3f});
 
   Sphere sphere_2({1.0f, 0.0f, -5.0f}, 1.0f);
-  sphere_2.setColor({0.0f, 1.0f, 0.0f});
+  sphere_2.setColor({0.1f, 0.5f, 0.5f});
 
   Scene scene;
   scene.setCamera(&camera);
+  scene.addLight(light);
+  scene.addLight(light_2);
+  scene.addLight(light_3);
   scene.addShape(&sphere_1);
   scene.addShape(&sphere_2);
 
@@ -37,11 +44,11 @@ int main() {
     float delta_time = window.beginFrame();
     glm::vec3 target = camera.getLookAt();
     float radius = 5.0f;
-    camera.setPosition({target.x + radius * sin(t), target.y,
-                        target.z + radius * cos(t)});
+    camera.setPosition(
+        {target.x + radius * sin(t), target.y, target.z + radius * cos(t)});
     std::cout << "Camera Position: (" << camera.getPosition().x << ", "
-              << camera.getPosition().y << ", " << camera.getPosition().z
-              << ")" << std::endl;
+              << camera.getPosition().y << ", " << camera.getPosition().z << ")"
+              << std::endl;
     std::cout << "FPS: " << 1.0f / delta_time << std::endl;
     t += delta_time;
     ray_tracer.render();

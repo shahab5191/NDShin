@@ -1,0 +1,212 @@
+[
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glm-build/glm",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -O3 -DNDEBUG -O3 -march=native -std=c++20 -o CMakeFiles/glm.dir/detail/glm.cpp.o -c /home/shahab/projects/ndshin/build-release/_deps/glm-src/glm/detail/glm.cpp",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glm-src/glm/detail/glm.cpp",
+  "output": "_deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/context.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/init.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/input.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/input.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/monitor.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/platform.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/platform.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/vulkan.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/vulkan.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/window.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/egl_context.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/egl_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/osmesa_context.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/osmesa_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_init.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_monitor.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_window.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_joystick.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/null_joystick.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_module.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_module.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_time.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_time.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_thread.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_thread.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_init.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_monitor.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_window.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/x11_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/xkb_unicode.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/xkb_unicode.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/glx_context.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/glx_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/wl_init.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_init.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/wl_init.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/wl_monitor.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_monitor.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/wl_monitor.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/wl_window.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_window.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/wl_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/linux_joystick.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/linux_joystick.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -flto=auto -fno-fat-lto-objects -fPIC -Wall -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_poll.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glfw-src/src/posix_poll.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_poll.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/_deps/glad-build",
+  "command": "/usr/bin/cc  -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -o CMakeFiles/glad.dir/src/glad.c.o -c /home/shahab/projects/ndshin/build-release/_deps/glad-build/src/glad.c",
+  "file": "/home/shahab/projects/ndshin/build-release/_deps/glad-build/src/glad.c",
+  "output": "_deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/raytracer.cpp.o -c /home/shahab/projects/ndshin/src/raytracer.cpp",
+  "file": "/home/shahab/projects/ndshin/src/raytracer.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/raytracer.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/ray.cpp.o -c /home/shahab/projects/ndshin/src/ray.cpp",
+  "file": "/home/shahab/projects/ndshin/src/ray.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/ray.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/sphere.cpp.o -c /home/shahab/projects/ndshin/src/sphere.cpp",
+  "file": "/home/shahab/projects/ndshin/src/sphere.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/sphere.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/camera.cpp.o -c /home/shahab/projects/ndshin/src/camera.cpp",
+  "file": "/home/shahab/projects/ndshin/src/camera.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/camera.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/window.cpp.o -c /home/shahab/projects/ndshin/src/window.cpp",
+  "file": "/home/shahab/projects/ndshin/src/window.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/window.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/scene.cpp.o -c /home/shahab/projects/ndshin/src/scene.cpp",
+  "file": "/home/shahab/projects/ndshin/src/scene.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/scene.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin.dir/main.cpp.o -c /home/shahab/projects/ndshin/src/main.cpp",
+  "file": "/home/shahab/projects/ndshin/src/main.cpp",
+  "output": "src/CMakeFiles/ndshin.dir/main.cpp.o"
+}
+]

@@ -12,6 +12,10 @@ public:
   glm::vec3 getCenter() const { return center; }
   float getRadius() const { return radius; }
 
+  glm::vec3 getNormal(const glm::vec3 &point) const override {
+    return glm::normalize(point - center);
+  }
+
 private:
   glm::vec3 center;
   float radius;
