@@ -20,6 +20,9 @@ Window::Window(int width, int height, const std::string &title,
     throw std::runtime_error("Failed to create GLFW window");
   }
   glfwMakeContextCurrent(window);
+  // Disable vsync: we throttle nothing and report our own FPS, so let frames
+  // present as fast as they render instead of blocking on the compositor.
+  glfwSwapInterval(0);
 
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cerr << "Failed to initialize GLAD" << std::endl;
