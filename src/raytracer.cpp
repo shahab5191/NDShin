@@ -51,7 +51,7 @@ glm::vec3 RayTracer::computeLighting(const glm::vec4 &point,
 }
 
 void RayTracer::render() {
-  // Hoist per-frame invariants out of the per-voxel loop. The sensor is a 3D
+  // Hoist per-frame invariants out of the per-pixel loop. The sensor is a 3D
   // box spanned by right/up/over, sitting one focal unit forward.
   const Camera &camera = scene->getCamera();
   const glm::vec4 origin = camera.getPosition();
@@ -60,67 +60,45 @@ void RayTracer::render() {
   const glm::vec4 over = camera.getOver();
   const glm::vec4 forward = camera.getForward();
   const float scale = std::tan(glm::radians(camera.getFOV() / 2.0f));
+  const float inv_depth = 2.0f * scale / depth;
+  const float pz0 = (1.0f / depth - 1.0f) * scale; // pz at z == 0
 
-  // One ray per voxel. The voxels are independent, so the (z, y) planes can be
-  // split across threads; writes target disjoint voxel_buffer indices.
+  // One display pixel per (x, y). The columns are independent, so they split
+  // across threads; each thread writes disjoint pixel_buffer indices.
 #pragma omp parallel for schedule(dynamic) collapse(2)
-  for (int z = 0; z < depth; ++z) {
-    for (int y = 0; y < height; ++y) {
-      // The sensor region is a cube [-scale, scale]^3, sampled at the voxel
-      // resolution -- a coarser depth axis just samples the same cube sparser,
-      // so hyperspheres stay round rather than getting stretched.
-      const float pz = (2.0f * (z + 0.5f) / depth - 1.0f) * scale;
+  for (int y = 0; y < height; ++y) {
+    for (int x = 0; x < width; ++x) {
+      const float px = (2.0f * (x + 0.5f) / width - 1.0f) * scale;
       const float py = (1.0f - 2.0f * (y + 0.5f) / height) * scale;
-      const glm::vec4 pyz = py * up + pz * over + forward;
-      for (int x = 0; x < width; ++x) {
-        const float px = (2.0f * (x + 0.5f) / width - 1.0f) * scale;
+      // Ray direction (pre-normalization) = base + pz * over. Only the pz term
+      // changes as we march the depth axis, so hoist the constant part.
+      const glm::vec4 base = px * right + py * up + forward;
+
+      glm::vec3 out(0.0f);
+      // March the sensor depth (over axis) front to back. Hits are opaque, so
+      // the first one occludes everything behind it -- stop there. Lighting is
+      // therefore evaluated at most once per pixel.
+      for (int z = 0; z < depth; ++z) {
+        const float pz = pz0 + z * inv_depth;
 
         Ray ray;
         ray.origin = origin;
-        ray.direction = glm::normalize(px * right + pyz);
+        ray.direction = glm::normalize(base + pz * over);
 
         float closest_t;
         Shape *closest_shape = findClosestIntersection(ray, closest_t);
-
-        const int vi = (z * height + y) * width + x;
         if (closest_shape) {
           glm::vec4 point = ray.at(closest_t);
           glm::vec4 normal = closest_shape->getNormal(point);
-          glm::vec3 lighting = computeLighting(point, normal);
-          glm::vec3 color = closest_shape->getColor() * lighting;
-          voxel_buffer[vi] = glm::vec4(color, 1.0f); // opaque hit
-        } else {
-          voxel_buffer[vi] = glm::vec4(0.0f); // transparent miss
+          out = closest_shape->getColor() * computeLighting(point, normal);
+          break;
         }
       }
-    }
-  }
 
-  compositeVolume();
-}
-
-// Flatten the RGBA voxel volume into the 2D display image by alpha-compositing
-// along the depth (over) axis, front to back. Missed voxels are transparent so
-// they contribute nothing; opaque hits stop the accumulation, so this shows the
-// nearest lit surface along the sensor's depth.
-void RayTracer::compositeVolume() {
-#pragma omp parallel for schedule(dynamic)
-  for (int y = 0; y < height; ++y) {
-    for (int x = 0; x < width; ++x) {
-      glm::vec3 accum(0.0f);
-      float transmittance = 1.0f; // how much light still gets through
-      for (int z = 0; z < depth; ++z) {
-        const glm::vec4 v = voxel_buffer[(z * height + y) * width + x];
-        accum += transmittance * v.a * glm::vec3(v);
-        transmittance *= (1.0f - v.a);
-        if (transmittance <= 0.001f) {
-          break; // fully opaque -- nothing behind this voxel is visible
-        }
-      }
       const int i = (y * width + x) * 3;
-      pixel_buffer[i + 0] = accum.r;
-      pixel_buffer[i + 1] = accum.g;
-      pixel_buffer[i + 2] = accum.b;
+      pixel_buffer[i + 0] = out.r;
+      pixel_buffer[i + 1] = out.g;
+      pixel_buffer[i + 2] = out.b;
     }
   }
 }

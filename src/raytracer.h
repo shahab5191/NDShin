@@ -9,13 +9,14 @@ class RayTracer {
 public:
   RayTracer(Scene *scene, int width, int height, int depth)
       : width(width), height(height), depth(depth), scene(scene) {
-    voxel_buffer.resize(width * height * depth, glm::vec4(0.0f));
     pixel_buffer.resize(width * height * 3, 0.0f);
   }
   RayTracer(const RayTracer &) = delete;
 
-  // Cast one ray per voxel of the 3D sensor, then flatten the RGBA volume into
-  // the 2D pixel buffer that the window displays.
+  // For each display pixel, march the sensor's depth axis and keep the nearest
+  // opaque hit (misses are transparent). This fuses the old volume-render +
+  // composite passes so lighting is computed only for the visible surface and
+  // occluded voxels behind a hit are never traced.
   void render();
   const std::vector<float> &getPixelBuffer() const;
 
@@ -23,13 +24,11 @@ private:
   int width;
   int height;
   int depth;
-  std::vector<glm::vec4> voxel_buffer; // RGBA per voxel (alpha 0 = ray missed)
-  std::vector<float> pixel_buffer;     // RGB, composited for display
+  std::vector<float> pixel_buffer; // RGB for display
   Scene *scene;
 
   Shape *findClosestIntersection(const Ray &ray, float &closest_t);
   glm::vec3 computeLighting(const glm::vec4 &point, const glm::vec4 &normal);
   bool isInShadow(const glm::vec4 &point, const glm::vec4 &light_dir,
                   const Light &light);
-  void compositeVolume();
 };
