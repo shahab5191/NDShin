@@ -2,8 +2,10 @@
 #include <iostream>
 #include <string>
 
-Window::Window(int width, int height, const std::string &title)
-    : width(width), height(height), title(title) {
+Window::Window(int width, int height, const std::string &title,
+               int renderWidth, int renderHeight)
+    : width(width), height(height), renderWidth(renderWidth),
+      renderHeight(renderHeight), title(title), last_time(0.0) {
   if (!glfwInit()) {
     std::cerr << "Failed to initialize GLFW" << std::endl;
     throw std::runtime_error("Failed to initialize GLFW");
@@ -29,15 +31,21 @@ Window::Window(int width, int height, const std::string &title)
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-  // Allocate the texture storage once (nullptr = no initial data); the pixels
-  // are (re)uploaded every frame with glTexSubImage2D below.
-  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, width, height, 0, GL_RGB, GL_FLOAT,
-               nullptr);
+  // Allocate the texture storage once at the render resolution (nullptr = no
+  // initial data); the pixels are (re)uploaded every frame with glTexSubImage2D
+  // below and upscaled to the window on blit.
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, renderWidth, renderHeight, 0, GL_RGB,
+               GL_FLOAT, nullptr);
 
   glGenFramebuffers(1, &fbo);
   glBindFramebuffer(GL_FRAMEBUFFER, fbo);
   glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,
                          textureID, 0);
+
+  // Seed the frame clock so the first beginFrame() delta is ~0 instead of
+  // (now - uninitialized). GLFW's timer starts at glfwInit() above, so this is
+  // already a small value.
+  last_time = glfwGetTime();
 }
 
 Window::~Window() {
@@ -56,8 +64,8 @@ float Window::beginFrame() {
 
 void Window::presentFrame(const std::vector<float> &buffer) {
   glBindTexture(GL_TEXTURE_2D, textureID);
-  glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_RGB, GL_FLOAT,
-                  buffer.data());
+  glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, renderWidth, renderHeight, GL_RGB,
+                  GL_FLOAT, buffer.data());
 
   glBindFramebuffer(GL_FRAMEBUFFER, 0);
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -70,7 +78,7 @@ void Window::presentFrame(const std::vector<float> &buffer) {
 
   glBindFramebuffer(GL_READ_FRAMEBUFFER, fbo);
   glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-  glBlitFramebuffer(0, 0, width, height, 0, 0, fb_width, fb_height,
+  glBlitFramebuffer(0, 0, renderWidth, renderHeight, 0, 0, fb_width, fb_height,
                     GL_COLOR_BUFFER_BIT, GL_LINEAR);
 
   // Swap buffers and poll window events (like clicking the close X)

@@ -1,9 +1,11 @@
 #include "sphere.h"
+#include <cmath>
 
 bool Sphere::intersect(const Ray &ray, float &t) const {
-  glm::vec3 oc = ray.origin - center;
+  glm::vec4 oc = ray.origin - center;
   // ray.direction is normalized, so a = dot(dir, dir) = 1. Using the reduced
   // quadratic (half_b = dot(oc, dir)) drops the 2s and 4s and a division.
+  // The dot products run over all four components -- otherwise identical to 3D.
   float half_b = glm::dot(oc, ray.direction);
   float c = glm::dot(oc, oc) - radius * radius;
   float discriminant = half_b * half_b - c;
@@ -12,7 +14,7 @@ bool Sphere::intersect(const Ray &ray, float &t) const {
     return false; // No intersection
   }
 
-  float sqrt_discriminant = sqrt(discriminant);
+  float sqrt_discriminant = std::sqrt(discriminant);
   // t1 <= t2 always, since sqrt_discriminant >= 0
   float t1 = -half_b - sqrt_discriminant;
   float t2 = -half_b + sqrt_discriminant;

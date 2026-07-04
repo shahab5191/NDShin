@@ -1,5 +1,6 @@
 #pragma once
 #include "ray.h"
+#include <glm/glm.hpp>
 
 class Shape {
 public:
@@ -10,7 +11,9 @@ public:
   glm::vec3 getColor() const { return color; }
   void setColor(const glm::vec3 &color) { this->color = color; }
 
-  virtual glm::vec3 getNormal(const glm::vec3 &point) const = 0;
+  // Surface normal at a point, in 4D. Colour stays RGB (vec3): the extra
+  // dimension is geometric, the material is still just a colour.
+  virtual glm::vec4 getNormal(const glm::vec4 &point) const = 0;
 
 private:
   glm::vec3 color;

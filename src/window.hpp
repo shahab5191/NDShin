@@ -9,16 +9,26 @@
 
 class Window {
 public:
-  Window(int width, int height, const std::string &title);
+  // The render resolution (the composited image we upload) is decoupled from
+  // the on-screen window size: the 3D voxel sensor is small (W*H*D rays), so we
+  // render a small image and let the GPU upscale it to the window on blit.
+  Window(int width, int height, const std::string &title, int renderWidth,
+         int renderHeight);
   ~Window();
 
   bool shouldClose() const { return glfwWindowShouldClose(window); }
   float beginFrame();
   void presentFrame(const std::vector<float> &buffer);
 
+  // Poll a key's held state (use GLFW_KEY_* constants). Reflects events from the
+  // most recent glfwPollEvents() in presentFrame().
+  bool isKeyDown(int key) const { return glfwGetKey(window, key) == GLFW_PRESS; }
+
 private:
   int width;
   int height;
+  int renderWidth;
+  int renderHeight;
   std::string title;
   GLFWwindow *window;
   GLuint textureID;
