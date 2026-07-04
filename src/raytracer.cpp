@@ -74,10 +74,11 @@ void RayTracer::render() {
       // changes as we march the depth axis, so hoist the constant part.
       const glm::vec4 base = px * right + py * up + forward;
 
-      glm::vec3 out(0.0f);
-      // March the sensor depth (over axis) front to back. Hits are opaque, so
-      // the first one occludes everything behind it -- stop there. Lighting is
-      // therefore evaluated at most once per pixel.
+      glm::vec3 accum(0.0f);
+      float transmittance = 1.0f; // fraction of light still reaching the eye
+      // March the sensor depth (over axis) front to back, blending each hit
+      // voxel as a semi-transparent cloud sample. We stop once the volume has
+      // absorbed essentially all the light (nothing behind is visible).
       for (int z = 0; z < depth; ++z) {
         const float pz = pz0 + z * inv_depth;
 
@@ -90,15 +91,19 @@ void RayTracer::render() {
         if (closest_shape) {
           glm::vec4 point = ray.at(closest_t);
           glm::vec4 normal = closest_shape->getNormal(point);
-          out = closest_shape->getColor() * computeLighting(point, normal);
-          break;
+          glm::vec3 color = closest_shape->getColor() * computeLighting(point, normal);
+          accum += transmittance * density * color;
+          transmittance *= (1.0f - density);
+          if (transmittance <= 0.01f) {
+            break; // volume is effectively opaque from here on
+          }
         }
       }
 
       const int i = (y * width + x) * 3;
-      pixel_buffer[i + 0] = out.r;
-      pixel_buffer[i + 1] = out.g;
-      pixel_buffer[i + 2] = out.b;
+      pixel_buffer[i + 0] = accum.r;
+      pixel_buffer[i + 1] = accum.g;
+      pixel_buffer[i + 2] = accum.b;
     }
   }
 }

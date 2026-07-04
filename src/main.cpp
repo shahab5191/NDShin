@@ -7,6 +7,7 @@
 #include "scene.h"
 #include "sphere.h"
 #include "window.hpp"
+#include <algorithm>
 #include <iostream>
 
 // On-screen window size.
@@ -69,6 +70,8 @@ int main() {
 
   RayTracer ray_tracer(&scene, SENSOR_WIDTH, SENSOR_HEIGHT, SENSOR_DEPTH);
 
+  float density = 0.15f; // cloud opacity per hit voxel; tuned live with [ and ]
+
   while (!window.shouldClose()) {
     float delta_time = window.beginFrame();
     if (window.isKeyDown(GLFW_KEY_ESCAPE)) {
@@ -104,6 +107,13 @@ int main() {
 
     // Shed floating-point drift so the basis stays orthonormal over time.
     camera.reorthonormalize();
+
+    // Dial the cloud density live: [ thinner / wispier, ] denser / more solid.
+    // Scaled by delta_time and clamped to a usable range.
+    if (window.isKeyDown(GLFW_KEY_LEFT_BRACKET)) density -= 0.3f * delta_time;
+    if (window.isKeyDown(GLFW_KEY_RIGHT_BRACKET)) density += 0.3f * delta_time;
+    density = std::clamp(density, 0.01f, 1.0f);
+    ray_tracer.setDensity(density);
 
     std::cout << "FPS: " << 1.0f / delta_time << '\n';
 
