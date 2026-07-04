@@ -187,6 +187,18 @@
 },
 {
   "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/hyperbox.cpp.o -c /home/shahab/projects/ndshin/src/hyperbox.cpp",
+  "file": "/home/shahab/projects/ndshin/src/hyperbox.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/hyperbox.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/ellipsoid.cpp.o -c /home/shahab/projects/ndshin/src/ellipsoid.cpp",
+  "file": "/home/shahab/projects/ndshin/src/ellipsoid.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/ellipsoid.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
   "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/camera.cpp.o -c /home/shahab/projects/ndshin/src/camera.cpp",
   "file": "/home/shahab/projects/ndshin/src/camera.cpp",
   "output": "src/CMakeFiles/ndshin_core.dir/camera.cpp.o"

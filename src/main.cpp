@@ -1,4 +1,7 @@
 #include "camera.h"
+#include "ellipsoid.h"
+#include "hyperbox.h"
+#include "hyperplane.h"
 #include "light.h"
 #include "raytracer.h"
 #include "scene.h"
@@ -41,6 +44,18 @@ int main() {
   Sphere sphere_2({-2.0f, 0.0f, 0.0f, 5.0f}, 1.2f);
   sphere_2.setColor({0.1f, 0.5f, 0.5f});
 
+  // A tesseract (all four half-extents equal) off to the +x side.
+  Hyperbox tesseract({3.0f, 0.0f, 0.0f, 0.0f}, glm::vec4(1.2f));
+  tesseract.setColor({0.3f, 0.5f, 0.8f});
+
+  // A 4D ellipsoid: stretched along x and w.
+  Ellipsoid ellipsoid({0.0f, 3.0f, 0.0f, 0.0f}, {2.2f, 1.0f, 1.0f, 2.2f});
+  ellipsoid.setColor({0.8f, 0.6f, 0.2f});
+
+  // An infinite floor: the 3-plane y = -3.
+  Hyperplane floor({0.0f, -3.0f, 0.0f, 0.0f}, {0.0f, 1.0f, 0.0f, 0.0f});
+  floor.setColor({0.4f, 0.4f, 0.4f});
+
   Scene scene;
   scene.setCamera(&camera);
   scene.addLight(light);
@@ -48,6 +63,9 @@ int main() {
   scene.addLight(light_3);
   scene.addShape(&sphere_1);
   scene.addShape(&sphere_2);
+  scene.addShape(&tesseract);
+  scene.addShape(&ellipsoid);
+  scene.addShape(&floor);
 
   RayTracer ray_tracer(&scene, SENSOR_WIDTH, SENSOR_HEIGHT, SENSOR_DEPTH);
 

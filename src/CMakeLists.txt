@@ -2,6 +2,9 @@ add_library(ndshin_core STATIC
     raytracer.cpp
     ray.cpp
     sphere.cpp
+    hyperbox.cpp
+    ellipsoid.cpp
+    hyperplane.h
     shape.h
     camera.cpp
     window.cpp
