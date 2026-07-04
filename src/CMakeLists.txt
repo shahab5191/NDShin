@@ -7,6 +7,7 @@ add_library(ndshin_core STATIC
     hyperplane.h
     shape.h
     camera.cpp
+    camera3d.cpp
     window.cpp
     scene.cpp
     light.h

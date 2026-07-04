@@ -205,6 +205,12 @@
 },
 {
   "directory": "/home/shahab/projects/ndshin/build-release/src",
+  "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/camera3d.cpp.o -c /home/shahab/projects/ndshin/src/camera3d.cpp",
+  "file": "/home/shahab/projects/ndshin/src/camera3d.cpp",
+  "output": "src/CMakeFiles/ndshin_core.dir/camera3d.cpp.o"
+},
+{
+  "directory": "/home/shahab/projects/ndshin/build-release/src",
   "command": "/usr/bin/c++  -I/home/shahab/projects/ndshin/src -I/home/shahab/projects/ndshin/build-release/_deps/glm-src -I/home/shahab/projects/ndshin/build-release/_deps/glfw-src/include -I/home/shahab/projects/ndshin/build-release/_deps/glad-build/include -O3 -DNDEBUG -O3 -march=native -std=c++20 -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ndshin_core.dir/window.cpp.o -c /home/shahab/projects/ndshin/src/window.cpp",
   "file": "/home/shahab/projects/ndshin/src/window.cpp",
   "output": "src/CMakeFiles/ndshin_core.dir/window.cpp.o"
